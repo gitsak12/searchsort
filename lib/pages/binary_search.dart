@@ -52,11 +52,11 @@ class _BinarySearchState extends ConsumerState<BinarySearch> {
 
   @override
   Widget build(BuildContext context) {
-
     searchName =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
@@ -157,7 +157,7 @@ class _BinarySearchState extends ConsumerState<BinarySearch> {
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.only(
-          bottom: size.height * 0.01,
+          bottom: size.height * 0.04,
         ),
         child: Row(
           children: [

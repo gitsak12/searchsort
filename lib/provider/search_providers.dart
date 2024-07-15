@@ -31,7 +31,7 @@ class SearchProvider extends ChangeNotifier {
   binarySearch(int low, int high, int key) async {
     if (low > high) {
       message = 'Element not exist';
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 2));
       notifyListeners();
       return;
     }
@@ -40,20 +40,20 @@ class SearchProvider extends ChangeNotifier {
     // element found
     if (key == numbers[mid]) {
       message = 'Element found at index $mid';
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 2));
       notifyListeners();
       return true;
     }
 
     if (key > numbers[mid]) {
       message = 'Searching in upper half';
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 2));
       lowProvider = mid + 1;
       notifyListeners();
       return binarySearch(mid + 1, high, key);
     } else {
       message = 'Searching in lower half';
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 2));
       highProvider = mid - 1;
       notifyListeners();
       return binarySearch(low, mid - 1, key);

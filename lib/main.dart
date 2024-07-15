@@ -6,7 +6,11 @@ import 'package:searchsort/pages/bubble_sort.dart';
 import 'package:searchsort/provider/sort_providers.dart';
 
 void main() {
-  runApp(ProviderScope(child: MyApp()));
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -41,6 +45,7 @@ class Home extends ConsumerWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: appBar('SearchSort'),
       body: SingleChildScrollView(
         child: Container(

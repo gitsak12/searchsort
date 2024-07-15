@@ -87,6 +87,7 @@ class _BubbleSortState extends ConsumerState<BubbleSort> {
     numbers = ref.watch(sortListProvider).myBars;
     int counter = 0;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
@@ -130,7 +131,7 @@ class _BubbleSortState extends ConsumerState<BubbleSort> {
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.only(
-          bottom: size.height * 0.01,
+          bottom: size.height * 0.04,
         ),
         child: Row(
           children: [
@@ -141,7 +142,7 @@ class _BubbleSortState extends ConsumerState<BubbleSort> {
                         WidgetStateProperty.all(Colors.greenAccent)),
                 onPressed: ref.read(sortListProvider.notifier).randomize,
                 child: const Text(
-                  'Randomize',
+                  'Reset',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
               ),

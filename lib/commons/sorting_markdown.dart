@@ -69,7 +69,7 @@ Insertion Sort is a simple and intuitive comparison-based sorting algorithm. It 
 
 - **Worst-case time complexity:** \(O(n^2)\)
   - Occurs when the array is in reverse order.
-- **Average-case time complexity:** \(O(n^2^)\)
+- **Average-case time complexity:** \(O(n^2)\)
   - Occurs when elements are in jumbled order, and half of the elements are unsorted.
 - **Best-case time complexity:** \(O(n)\)
   - Occurs when the array is already sorted.
